@@ -42,7 +42,6 @@
 
 ## **🏗️ Project Overview**
 
-**Describe:**
 
 * Competition Context: Part of the Break Through Tech AI Program in collaboration with the Algorithmic Justice League (AJL).
 * Objective: Build a fair and inclusive machine learning model for dermatology that accurately classifies skin conditions across diverse skin tones.
