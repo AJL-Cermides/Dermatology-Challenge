@@ -9,7 +9,7 @@
 | Name | GitHub Handle | Contribution |
 | ----- | ----- | ----- |
 | Kiran Mitra | @kiranmitra | Researched base models, Tested Xception model, Proposed data preprocessing methods including double-axis data augmentation|
-| Mel Ramakrishnan | @MelRam | Led EDA, visualized dataset distributions, handled missing data |
+| Nicole Sanchez | @N-Sanchez8661 | Contributed to EDA techniques, visualized dataset distributions, handled missing data |
 | Charlie Nguyen | @CharlieN | Implemented explainability tools |
 
 ---
