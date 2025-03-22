@@ -10,7 +10,7 @@
 | ----- | ----- | ----- |
 | Kiran Mitra | @kiranmitra | Researched base models, Tested Xception model, Proposed data preprocessing methods including double-axis data augmentation|
 | Nicole Sanchez | @N-Sanchez8661 | Contributed to EDA techniques, visualized dataset distributions, Tested ResNet50 Model|
-| Shivani Elitem | @shivanielitem | Contributed to EDA techniques, Determined and removed empty images, Tested InceptionV3 Model, |
+| Shivani Elitem | @shivanielitem | Visualized datatset distributions, Determined and removed empty images, Tested InceptionV3 Model, |
 
 ---
 
