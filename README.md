@@ -11,7 +11,7 @@
 | Kiran Mitra | @kiranmitra | Researched base models, Tested Xception model, Proposed data preprocessing methods including double-axis data augmentation|
 | Nicole Sanchez | @N-Sanchez8661 | Contributed to EDA techniques, visualized dataset distributions, Tested ResNet50 Model|
 | Shivani Elitem | @shivanielitem | Visualized datatset distributions, Determined and removed empty images, Tested InceptionV3 Model, |
-
+| Saba Sohail | @saba-sohail | Contributed to EDA techniques, experimented with custom focal loss, tested VGG16 Model |
 ---
 
 ## **🎯 Project Highlights**
@@ -60,6 +60,11 @@
 **Potential visualizations to include:**
 
 * Plots, charts, heatmaps, feature visualizations, sample dataset images
+* ![image](https://github.com/user-attachments/assets/117e3e93-01f7-47e1-b4d7-90c2f6227c1d)
+* ![image](https://github.com/user-attachments/assets/ba8f0dc5-a2d9-4c70-8fa9-70f08a095a5d)
+* ![__results___20_0](https://github.com/user-attachments/assets/6f8655e6-bfc9-42e5-b22d-abb2186cb820)
+* ![__results___21_0](https://github.com/user-attachments/assets/87d2d535-6307-442d-b371-37ba5d8ac2a7)
+* ![__results___22_0](https://github.com/user-attachments/assets/b3bde879-1343-4bb4-84a0-4a3ece36f19c)
 
 ---
 
