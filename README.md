@@ -44,9 +44,9 @@
 
 **Describe:**
 
-* The Kaggle competition and its connection to the Break Through Tech AI Program
-* The objective of the challenge
-* The real-world significance of the problem and the potential impact of your work
+* Competition Context: Part of the Break Through Tech AI Program in collaboration with the Algorithmic Justice League (AJL).
+* Objective: Build a fair and inclusive machine learning model for dermatology that accurately classifies skin conditions across diverse skin tones.
+* Significance: Dermatology AI models often perform poorly on darker skin tones due to biased training data. This leads to diagnostic disparities and worsens health inequities.
 
 ---
 
