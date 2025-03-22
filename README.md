@@ -8,7 +8,7 @@
 
 | Name | GitHub Handle | Contribution |
 | ----- | ----- | ----- |
-| Alice Doe | @AliceDoe | Built CNN model, performed data augmentation |
+| Kiran Mitra | @kiranmitra | Researched base models, Tested Xception model, Proposed data preprocessing methods including double-axis data augmentation|
 | Mel Ramakrishnan | @MelRam | Led EDA, visualized dataset distributions, handled missing data |
 | Charlie Nguyen | @CharlieN | Implemented explainability tools |
 
@@ -92,11 +92,6 @@
 ## **🖼️ Impact Narrative**
 
 **Answer the relevant questions below based on your competition:**
-
-**WiDS challenge:**
-
-1. What brain activity patterns are associated with ADHD; are they different between males and females, and, if so, how?
-2. How could your work help contribute to ADHD research and/or clinical care?
 
 **AJL challenge:**
 
