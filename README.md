@@ -12,19 +12,20 @@
 | Nicole Sanchez | @N-Sanchez8661 | Contributed to EDA techniques, visualized dataset distributions, Tested ResNet50 Model|
 | Shivani Elitem | @ShivaniElitem | Visualized datatset distributions, Determined and removed empty images, Tested InceptionV3 Model, |
 | Saba Sohail | @saba-sohail | Contributed to EDA techniques, experimented with custom focal loss, tested VGG16 Model |
+| Saba Sohail | @saba-sohail | Contributed to EDA techniques, experimented with custom focal loss, tested VGG16 Model |
 ---
 
 ## **🎯 Project Highlights**
 
 **Example:**
 
+* In Top 20 of all teams (public and private leaderboards)
 * Developed a deep learning model using transfer learning techniques to classify 21 different skin conditions across diverse skin tones.
 * Achieved an F1 score of \[insert score\] and a ranking of \[insert ranking out of participating teams\] on the final Kaggle Leaderboard
 * Used \[explainability tool\] to interpret model decisions
 * Implemented data augmentation strategies to improve model generalization, including adjustments for underrepresented skin tones.
 
 🔗 [Equitable AI for Dermatology | Kaggle Competition Page](https://www.kaggle.com/competitions/bttai-ajl-2025/overview)
-🔗 [WiDS Datathon 2025 | Kaggle Competition Page](https://www.kaggle.com/competitions/widsdatathon2025/overview)
 
 ---
 
@@ -32,11 +33,9 @@
 
 **Provide step-by-step instructions so someone else can run your code and reproduce your results. Depending on your setup, include:**
 
-* How to clone the repository
-* How to install dependencies
-* How to set up the environment
-* How to access the dataset(s)
-* How to run the notebook or scripts
+* Download the notebook and other files (including data) as is
+* Upload to Google Colab
+* Hit Run All!
 
 ---
 
@@ -51,11 +50,7 @@
 
 ## **📊 Data Exploration**
 
-**Describe:**
-
-* The dataset(s) used (i.e., the data provided in Kaggle \+ any additional sources)
-* Data exploration and preprocessing approaches
-* Challenges and assumptions when working with the dataset(s)
+We used the data provided by the AJL Kaggle competition. We assumed and verified two class impbalances in the data: 1) by skin tone and 2) by diagnosis. We also checked for correlation between skin tones and certain diagnoses, but found none in the data. 
 
 **Potential visualizations to include:**
 
@@ -70,11 +65,19 @@
 
 ## **🧠 Model Development**
 
-**Describe (as applicable):**
-
-* Model(s) used (e.g., CNN with transfer learning, regression models)
+* Model(s) used:
+  * CNNs with transfer learning
+  * Experimented with the following base models: via keras
+    * Xception (chosen)
+    * Inception
+    * ResNet
+    * VGGNets (19 and 16)
 * Feature selection and Hyperparameter tuning strategies
+  * Training via epochs
+  * Implemented dropout layers for regularization
+  * Early stopping isused to prevent overfitting
 * Training setup (e.g., % of data for training/validation, evaluation metric, baseline performance)
+  * 80% training, 20% validation
 
 ---
 
@@ -103,24 +106,50 @@ As Dr. Randi mentioned in her challenge overview, “Through poetry, art, and st
 As you answer the questions below, consider using not only text, but also illustrations, annotated visualizations, poetry, or other creative techniques to make your work accessible to a wider audience.
 Check out [this guide](https://drive.google.com/file/d/1kYKaVNR\_l7Abx2kebs3AdDi6TlPviC3q/view) from the Algorithmic Justice League for inspiration!
 
-1. What steps did you take to address [model fairness](https://haas.berkeley.edu/wp-content/uploads/What-is-fairness_-EGAL2.pdf)? (e.g., leveraging data augmentation techniques to account for training dataset imbalances; using a validation set to assess model performance across different skin tones)
-2. What broader impact could your work have?
+1. Addressing Model Fairness:
+  * Data Augmentation to Address Imbalances
+    * Applied augmentation techniques such as rotation and flipping to balance underrepresented diagnoses and skin tones in the dataset
+    * Ensured that synthetic variations preserved medical relevance while improving model robustness.
+  * Validation Set with Representative Distribution
+    * Used a validation set that mirrors the distribution of the augmented training set, ensuring that performance is assessed fairly across different skin tones and medical conditions.
+    * This approach helps evaluate whether the model generalizes well across diverse demographics rather than favoring overrepresented groups.
 
+2. Broader Impact:
+  * Reducing Bias in Medical AI: This project contributes to the development of more equitable AI-driven dermatological diagnostics, helping mitigate disparities in healthcare outcomes across different racial and ethnic groups.
+  * Improving Accessibility: A fairer model ensures that underrepresented communities receive accurate diagnoses, promoting inclusivity in medical AI applications.
+  * Setting Ethical AI Standards: The techniques applied can serve as a framework for broader AI fairness initiatives, influencing how machine learning models are trained and validated in healthcare and beyond.
+    
 ---
 
 ## **🚀 Next Steps & Future Improvements**
 
-**Address the following:**
-
-* What are some of the limitations of your model?
-* What would you do differently with more time/resources?
+* Limitations of the model:
+  * Potential Bias in Training Data: Even with augmentation, if the original dataset lacks diversity in skin tones or medical conditions, the model may still exhibit bias.
+  * Generalization Challenges: The model may perform well on the validation set but struggle with real-world images taken under different lighting conditions or from different camera sources.
+  * Limited Explainability: CNNs operate as black-box models, making it difficult to understand the reasoning behind individual predictions, which is critical in medical applications.
+* More time/resources:
+  * Advanced Fairness Techniques: Implement adversarial debiasing or re-weighting strategies to further reduce disparities across demographic groups.
+  * Hyperparameter Optimization: Conduct extensive tuning using Bayesian optimization or grid search to enhance performance.
+  * Explainability & Interpretability: Integrate techniques like saliency maps to visualize which features contribute to predictions, improving trust in medical applications.
 * What additional datasets or techniques would you explore?
+  * Datasets:
+    * ISIC (International Skin Imaging Collaboration): A diverse dataset of skin conditions across various skin tones.
+    * Fitzpatrick17k (full dataset): Contains images labeled by Fitzpatrick skin type, useful for fairness assessments.
+    * DermNet: A large dermatology image repository that can improve class balance.
+  * Techniques:
+    * Self-Supervised Learning: Leverage pretraining on unlabeled dermatology images to improve feature extraction.
+    * Fairness-Aware Loss Functions: Implement cost-sensitive learning to penalize misclassifications disproportionately affecting underrepresented groups.
+    * Ensemble Models: Combine multiple models (e.g., CNNs, Vision Transformers, and classical machine learning models) to improve robustness and reduce bias. Techniques could include:
+      * Bagging (e.g., averaging predictions from multiple CNN architectures) to enhance generalization.
+      * Boosting (e.g., using an ensemble of weaker models that focus on correcting previous misclassifications).
+      * Hybrid Models that integrate traditional ML classifiers (e.g., Random Forest) with deep learning for better interpretability and performance.
 
 ---
 
 ## **📄 References & Additional Resources**
 
-* Cite any relevant papers, articles, or tools used in your project
+VGGNet, ResNet, Inception, and Xception with Keras
+*source: https://pyimagesearch.com/2017/03/20/imagenet-vggnet-resnet-inception-xception-keras/
 
 ---
 
