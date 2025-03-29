@@ -91,7 +91,7 @@ We used the data provided by the AJL Kaggle competition. We assumed and verified
 - How your model performed across different skin tones (AJL)
 - Insights from evaluating model fairness (AJL)
 
-** Results: **
+**Results:**
 
 - Placed 18th overall in the Kaggle leaderboard
 - Final F1 score of 0.57514 on test dataset
