@@ -6,13 +6,13 @@
 
 ### **👥 Team Members**
 
-| Name           | GitHub Handle  | Contribution                                                                                                                                                                                                             |
-| -------------- | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Kiran Mitra    | @kiranmitra    | Researched base models, Tested Xception model, Proposed data preprocessing methods including double-axis data augmentation                                                                                               |
-| Nicole Sanchez | @N-Sanchez8661 | Contributed to EDA techniques, visualized dataset distributions, Tested ResNet50 Model                                                                                                                                   |
-| Shivani Elitem | @ShivaniElitem | Visualized datatset distributions, Determined and removed empty images, Tested InceptionV3 Model,                                                                                                                        |
-| Saba Sohail    | @saba-sohail   | Contributed to EDA techniques, experimented with custom focal loss, tested VGG16 Model                                                                                                                                   |
-| Lucy King      | @lucyking140   | Built out base transfer learning model from provided Colab examples, set up data augmentation structure for skin-color and diagnosis-based augmentation, experimented with new model structures and augmentation levels. |
+| Name           | GitHub Handle  | Contribution                                                                                                                                                   |
+| -------------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Kiran Mitra    | @kiranmitra    | Researched base models, Tested Xception model, Proposed data preprocessing methods including double-axis data augmentation                                     |
+| Nicole Sanchez | @N-Sanchez8661 | Contributed to EDA techniques, visualized dataset distributions, Tested ResNet50 Model                                                                         |
+| Shivani Elitem | @ShivaniElitem | Visualized datatset distributions, Determined and removed empty images, Tested InceptionV3 Model,                                                              |
+| Saba Sohail    | @saba-sohail   | Contributed to EDA techniques, experimented with custom focal loss, tested VGG16 Model                                                                         |
+| Lucy King      | @lucyking140   | Built out initial transfer learning model from provided Colabs, set up data augmentation for skin color and diagnosis, experimented with new model structures. |
 
 ---
 
@@ -36,7 +36,7 @@
 
 - Download the notebook and other files (including data) as is
 - Upload to Google Colab
-- Hit Run All!
+- Hit Run All! Use a GPU accelerator to significantly increase runtime to around 20 minutes.
 
 ---
 
@@ -90,6 +90,19 @@ We used the data provided by the AJL Kaggle competition. We assumed and verified
 - How your model performed overall
 - How your model performed across different skin tones (AJL)
 - Insights from evaluating model fairness (AJL)
+
+** Results: **
+
+- Placed 18th overall in the Kaggle leaderboard
+- Final F1 score of 0.57514 on test dataset
+- We struggled to combat overfitting (visible in the plot of training and validation accuracy and loss over time) when using the Xception model despite attempts to modify learning rate and model architecture, but still got the best performance with this model. This is a point of improvement in the future.
+- Overall, accuracy appeared to vary more by diagnosis than skin color, especially with regard to rarer or less differentiable conditions.
+- There was, however, a notable lack of darker skin colors represented in the dataset for certain diagnoses, with as few as 1 or no images for some skin color/diagnosis pairings. This prevented us from successfully increasing representation with augmentation, and it's likely that this lack of representation also results in an artificially high accuracy score on darker skin colors, as the validation set also contains very few if any images in these categories.
+
+![alt text](./assets/acc_and_loss.png)
+![alt text](./assets/by_diag.png)
+![alt text](./assets/by_fitz.png)
+![alt text](./assets/confusion_matrix.png)
 
 **Potential visualizations to include:**
 
