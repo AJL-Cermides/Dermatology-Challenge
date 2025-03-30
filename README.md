@@ -50,7 +50,7 @@
 
 ## **📊 Data Exploration**
 
-We used the data provided by the AJL Kaggle competition. We assumed and verified two class impbalances in the data: 1) by skin tone and 2) by diagnosis. We also checked for correlation between skin tones and certain diagnoses, but found none in the data.
+We used the data provided by the AJL Kaggle competition. We assumed and verified two class impbalances in the data: 1) by skin tone and 2) by diagnosis. We found out that skin colors are identified by two possible features: (fitzpatrick) centaur and (fitzpatrick) scale. We also checked for correlation between skin tones and certain diagnoses, but found none in the data.
 
 **Potential visualizations to include:**
 
@@ -85,6 +85,9 @@ We used the data provided by the AJL Kaggle competition. We assumed and verified
   - Early stopping isused to prevent overfitting
 - Training setup (e.g., % of data for training/validation, evaluation metric, baseline performance)
   - 80% training, 20% validation
+  - Sparse categorical crossentropy and (custom) focal loss functions
+  - Early stopping when validation loss has stopped improving
+  - Reducing learning rate when validation loss has stopped improving
 
 ---
 
