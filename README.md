@@ -62,6 +62,12 @@ We used the data provided by the AJL Kaggle competition. We assumed and verified
 - ![__results___22_0](https://github.com/user-attachments/assets/b3bde879-1343-4bb4-84a0-4a3ece36f19c)
 - ![image](https://github.com/user-attachments/assets/2aa47cd1-a232-4e46-ba50-573e49a6a13f)
 
+**Image Filtering for Data Cleaning:**
+- Implemented a filtering process to remove the dataset's empty or nearly empty images.
+- Converted images to grayscale and analyzed their pixel intensity.
+- Classified images with less than 40% pixel intensity as empty and removed them.
+- Ensured only meaningful images were included to improve model performance.
+- Verified file paths and updated the dataset to contain only valid images.
 ---
 
 ## **🧠 Model Development**
