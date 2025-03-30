@@ -1,6 +1,4 @@
-# GitHub Kaggle Project README Template
-
-⚠️ _Remember to update the above title and remove all guidance notes and examples in this template, before finalizing your README_
+# Equitable AI for Dermatology
 
 ---
 
@@ -18,12 +16,9 @@
 
 ## **🎯 Project Highlights**
 
-**Example:**
-
-- In Top 20 of all teams (public and private leaderboards)
 - Developed a deep learning model using transfer learning techniques to classify 21 different skin conditions across diverse skin tones.
-- Achieved an F1 score of \[insert score\] and a ranking of \[insert ranking out of participating teams\] on the final Kaggle Leaderboard
-- Used \[explainability tool\] to interpret model decisions
+- Achieved an F1 score of **0.57514**
+- Ranked **18th out of 75+ teams** on the final Kaggle Leaderboard
 - Implemented data augmentation strategies to improve model generalization, including adjustments for underrepresented skin tones.
 
 🔗 [Equitable AI for Dermatology | Kaggle Competition Page](https://www.kaggle.com/competitions/bttai-ajl-2025/overview)
@@ -82,7 +77,7 @@ We used the data provided by the AJL Kaggle competition. We assumed and verified
 - Feature selection and Hyperparameter tuning strategies
   - Training via epochs
   - Implemented dropout layers for regularization
-  - Early stopping isused to prevent overfitting
+  - Early stopping is used to prevent overfitting
 - Training setup (e.g., % of data for training/validation, evaluation metric, baseline performance)
   - 80% training, 20% validation
   - Sparse categorical crossentropy and (custom) focal loss functions
@@ -107,6 +102,8 @@ We used the data provided by the AJL Kaggle competition. We assumed and verified
 - We struggled to combat overfitting (visible in the plot of training and validation accuracy and loss over time) when using the Xception model despite attempts to modify learning rate and model architecture, but still got the best performance with this model. This is a point of improvement in the future.
 - Overall, accuracy appeared to vary more by diagnosis than skin color, especially with regard to rarer or less differentiable conditions.
 - There was, however, a notable lack of darker skin colors represented in the dataset for certain diagnoses, with as few as 1 or no images for some skin color/diagnosis pairings. This prevented us from successfully increasing representation with augmentation, and it's likely that this lack of representation also results in an artificially high accuracy score on darker skin colors, as the validation set also contains very few if any images in these categories.
+- Despite challenges with underrepresentation and overfitting, our model achieved promising results ultimately demonstrating the potential of inclusive AI/ML in dermatology.
+
 
 ![alt text](./assets/acc_and_loss.png)
 ![alt text](./assets/by_diag.png)
@@ -120,8 +117,6 @@ We used the data provided by the AJL Kaggle competition. We assumed and verified
 ---
 
 ## **🖼️ Impact Narrative**
-
-**Answer the relevant questions below based on your competition:**
 
 **AJL challenge:**
 
