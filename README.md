@@ -8,7 +8,7 @@
 | -------------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Kiran Mitra    | @kiranmitra    | Researched base models, Tested Xception model, Proposed data preprocessing methods including double-axis data augmentation                                     |
 | Nicole Sanchez | @N-Sanchez8661 | Contributed to EDA techniques, visualized dataset distributions, Tested ResNet50 Model                                                                         |
-| Shivani Elitem | @ShivaniElitem | Visualized datatset distributions, Determined and removed empty images, Tested InceptionV3 Model,                                                              |
+| Shivani Elitem | @ShivaniElitem | Visualized dataset distributions, Determined and removed empty images, Tested InceptionV3 Model,                                                              |
 | Saba Sohail    | @saba-sohail   | Contributed to EDA techniques, experimented with custom focal loss, tested VGG16 Model                                                                         |
 | Lucy King      | @lucyking140   | Built out initial transfer learning model from provided Colabs, set up data augmentation for skin color and diagnosis, experimented with new model structures. |
 
@@ -118,10 +118,12 @@ We used the data provided by the AJL Kaggle competition. We assumed and verified
 
 ## **🖼️ Impact Narrative**
 
+People with darker skin tones often go undiagnosed or misdiagnosed. This project is a small but important step toward addressing that gap in healthcare equity.
+
 **AJL challenge:**
 
 As Dr. Randi mentioned in her challenge overview, “Through poetry, art, and storytelling, you can reach others who might not know enough to understand what’s happening with the machine learning model or data visualizations, but might still be heavily impacted by this kind of work.”
-As you answer the questions below, consider using not only text, but also illustrations, annotated visualizations, poetry, or other creative techniques to make your work accessible to a wider audience.
+
 Check out [this guide](https://drive.google.com/file/d/1kYKaVNR_l7Abx2kebs3AdDi6TlPviC3q/view) from the Algorithmic Justice League for inspiration!
 
 1. Addressing Model Fairness:
