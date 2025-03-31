@@ -88,15 +88,6 @@ We used the data provided by the AJL Kaggle competition. We assumed and verified
 
 ## **📈 Results & Key Findings**
 
-**Describe (as applicable):**
-
-- Performance metrics (e.g., Kaggle Leaderboard score, F1-score)
-- How your model performed overall
-- How your model performed across different skin tones (AJL)
-- Insights from evaluating model fairness (AJL)
-
-**Results:**
-
 - Placed 18th overall in the Kaggle leaderboard
 - Final F1 score of 0.57514 on test dataset
 - We struggled to combat overfitting (visible in the plot of training and validation accuracy and loss over time) when using the Xception model despite attempts to modify learning rate and model architecture, but still got the best performance with this model. This is a point of improvement in the future.
