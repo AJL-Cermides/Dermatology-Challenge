@@ -8,7 +8,7 @@
 | -------------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Kiran Mitra    | @kiranmitra    | Researched base models, Tested Xception model, Proposed data preprocessing methods including double-axis data augmentation                                     |
 | Nicole Sanchez | @N-Sanchez8661 | Contributed to EDA techniques, visualized dataset distributions, Tested ResNet50 Model                                                                         |
-| Shivani Elitem | @ShivaniElitem | Visualized dataset distributions, Determined and removed empty images, Tested InceptionV3 Model,                                                              |
+| Shivani Elitem | @ShivaniElitem | Visualized dataset distributions, Determined and removed empty images, Tested InceptionV3 Model,                                                               |
 | Saba Sohail    | @saba-sohail   | Contributed to EDA techniques, experimented with custom focal loss, tested VGG16 Model                                                                         |
 | Lucy King      | @lucyking140   | Built out initial transfer learning model from provided Colabs, set up data augmentation for skin color and diagnosis, experimented with new model structures. |
 
@@ -47,9 +47,6 @@
 
 We used the data provided by the AJL Kaggle competition. We assumed and verified two class impbalances in the data: 1) by skin tone and 2) by diagnosis. We found out that skin colors are identified by two possible features: (fitzpatrick) centaur and (fitzpatrick) scale. We also checked for correlation between skin tones and certain diagnoses, but found none in the data.
 
-**Potential visualizations to include:**
-
-- Plots, charts, heatmaps, feature visualizations, sample dataset images
 - ![image](https://github.com/user-attachments/assets/117e3e93-01f7-47e1-b4d7-90c2f6227c1d)
 - ![image](https://github.com/user-attachments/assets/ba8f0dc5-a2d9-4c70-8fa9-70f08a095a5d)
 - ![__results___20_0](https://github.com/user-attachments/assets/6f8655e6-bfc9-42e5-b22d-abb2186cb820)
@@ -58,11 +55,13 @@ We used the data provided by the AJL Kaggle competition. We assumed and verified
 - ![image](https://github.com/user-attachments/assets/2aa47cd1-a232-4e46-ba50-573e49a6a13f)
 
 **Image Filtering for Data Cleaning:**
+
 - Implemented a filtering process to remove the dataset's empty or nearly empty images.
 - Converted images to grayscale and analyzed their pixel intensity.
 - Classified images with less than 40% pixel intensity as empty and removed them.
 - Ensured only meaningful images were included to improve model performance.
 - Verified file paths and updated the dataset to contain only valid images.
+
 ---
 
 ## **🧠 Model Development**
@@ -95,15 +94,10 @@ We used the data provided by the AJL Kaggle competition. We assumed and verified
 - There was, however, a notable lack of darker skin colors represented in the dataset for certain diagnoses, with as few as 1 or no images for some skin color/diagnosis pairings. This prevented us from successfully increasing representation with augmentation, and it's likely that this lack of representation also results in an artificially high accuracy score on darker skin colors, as the validation set also contains very few if any images in these categories.
 - Despite challenges with underrepresentation and overfitting, our model achieved promising results ultimately demonstrating the potential of inclusive AI/ML in dermatology.
 
-
 ![alt text](./assets/acc_and_loss.png)
 ![alt text](./assets/by_diag.png)
 ![alt text](./assets/by_fitz.png)
 ![alt text](./assets/confusion_matrix.png)
-
-**Potential visualizations to include:**
-
-- Confusion matrix, precision-recall curve, feature importance plot, prediction distribution, outputs from fairness or explainability tools
 
 ---
 
