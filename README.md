@@ -17,7 +17,7 @@
 ## **🎯 Project Highlights**
 
 - Developed a deep learning model using transfer learning techniques to classify 21 different skin conditions across diverse skin tones.
-- Achieved an F1 score of **0.57514**
+- Achieved an F1 score of **0.57514** on the final leaderboard, with a **0.61** F1 on the test sample used during the competition
 - Ranked **18th out of 75+ teams** on the final Kaggle Leaderboard
 - Implemented data augmentation strategies to improve model generalization, including adjustments for underrepresented skin tones.
 
